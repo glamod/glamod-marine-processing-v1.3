@@ -1,7 +1,0 @@
-{
-     "dataset":"icoads_r3000",
-     "main_data_model":"imma1",
-     "read_sections":["core","c1","c98"],
-     "filter_by":{"platform":{"section":"c1","element":"PT","values":["0","1","2","3","4","5"]}},
-     "cdm_map":"icoads_r3000"
-}
