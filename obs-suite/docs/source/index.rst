@@ -51,19 +51,6 @@ concurrently to the overall scheme (see figure below).
     General marine data flow. The Observations Suite is highlighted in the red box.
 
 
-.. _versions:
-
-Note on versions
-----------------
-
-This manual was written at the time of transition between glamod-marine-processing
-v1.1 and its migration to the SLURM scheduler.
-
-Consequently, this manual describes the Observations Suite as available in the
-HEAD of the repository (hence v1.1+), not in the last tagged version at that
-time (v1.1).
-
-
 Processing levels
 =================
 
@@ -130,12 +117,8 @@ the repository needs to be cloned:
 
 .. code-block:: bash
 
-  git clone git@git.noc.ac.uk:iregon/glamod-marine-processing.git --branch version
+  git clone git@git.noc.ac.uk:iregon/glamod-marine-processing.git --branch v1.2
 
-where:
-
-* version: see repository tags. Last tagged version is v1.1, with this manual
-  currently describing the HEAD of the repository (See :ref:`versions`).
 
 Setting paths and environments
 ------------------------------
@@ -172,7 +155,7 @@ Adding modules
 
 Four additional python modules have been developed for this suite. The table
 below lists these modules and which versions are compatible with the current
-marine code version (v1.1 and HEAD).
+marine code version (v1.2).
 
 .. list-table:: Title
    :widths: 30 30 55 10
@@ -249,12 +232,12 @@ Currently, the following configuration sets are available:
      - v1.1
    * - Demo release
      - release_demo-000000/ICOADS_R3.0.0T
-     - v1.1+ (HEAD)
+     - v1.2
 
 Up until v1.1 (release_2.0), the configuration files were not maintained in
 the configuration repository, but in the code repository. They have been now
 included in the configuration repository for traceability. It is also worth
-noting, that some changes have been made to the configuration files after v1.1:
+noting, that some changes have been made to the configuration files in v1.2:
 the format in the Demo release files must be applied when running the observations
 suite.
 

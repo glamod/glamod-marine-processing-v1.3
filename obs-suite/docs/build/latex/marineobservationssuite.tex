@@ -73,9 +73,9 @@
 
 
 \title{Marine observations suite}
-\date{Jul 27, 2020}
-\release{v1.1+}
-\author{DYB, IPG}
+\date{Jul 28, 2020}
+\release{v1.2}
+\author{IPG,DYB}
 \newcommand{\sphinxlogo}{\vbox{}}
 \renewcommand{\releasename}{Release}
 \makeindex
@@ -131,16 +131,6 @@ concurrently to the overall scheme (see figure below).
 
 \noindent\sphinxincludegraphics[width=600\sphinxpxdimen]{{marine_data_flow}.png}
 \caption{General marine data flow. The Observations Suite is highlighted in the red box.}\label{\detokenize{index:id3}}\end{figure}
-
-
-\section{Note on versions}
-\label{\detokenize{index:note-on-versions}}\label{\detokenize{index:versions}}
-This manual was written at the time of transition between glamod\sphinxhyphen{}marine\sphinxhyphen{}processing
-v1.1 and its migration to the SLURM scheduler.
-
-Consequently, this manual describes the Observations Suite as available in the
-HEAD of the repository (hence v1.1+), not in the last tagged version at that
-time (v1.1).
 
 
 \chapter{Processing levels}
@@ -216,16 +206,8 @@ glamod\sphinxhyphen{}marine\sphinxhyphen{}processing repository. Thus, to instal
 the repository needs to be cloned:
 
 \begin{sphinxVerbatim}[commandchars=\\\{\}]
-git clone git@git.noc.ac.uk:iregon/glamod\PYGZhy{}marine\PYGZhy{}processing.git \PYGZhy{}\PYGZhy{}branch version
+git clone git@git.noc.ac.uk:iregon/glamod\PYGZhy{}marine\PYGZhy{}processing.git \PYGZhy{}\PYGZhy{}branch v1.2
 \end{sphinxVerbatim}
-
-where:
-\begin{itemize}
-\item {} 
-version: see repository tags. Last tagged version is v1.1, with this manual
-currently describing the HEAD of the repository (See {\hyperref[\detokenize{index:versions}]{\sphinxcrossref{\DUrole{std,std-ref}{Note on versions}}}}).
-
-\end{itemize}
 
 
 \section{Setting paths and environments}
@@ -270,7 +252,7 @@ pip install \PYGZhy{}r requirements\PYGZus{}env0.txt
 \label{\detokenize{index:adding-modules}}
 Four additional python modules have been developed for this suite. The table
 below lists these modules and which versions are compatible with the current
-marine code version (v1.1 and HEAD).
+marine code version (v1.2).
 
 
 \begin{savenotes}\sphinxattablestart
@@ -407,7 +389,7 @@ Demo release
 &
 release\_demo\sphinxhyphen{}000000/ICOADS\_R3.0.0T
 &
-v1.1+ (HEAD)
+v1.2
 \\
 \hline
 \end{tabular}
@@ -417,7 +399,7 @@ v1.1+ (HEAD)
 Up until v1.1 (release\_2.0), the configuration files were not maintained in
 the configuration repository, but in the code repository. They have been now
 included in the configuration repository for traceability. It is also worth
-noting, that some changes have been made to the configuration files after v1.1:
+noting, that some changes have been made to the configuration files in v1.2:
 the format in the Demo release files must be applied when running the observations
 suite.
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.17)  27 JUL 2020 22:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019) (preloaded format=pdflatex 2020.3.17)  28 JUL 2020 13:10
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -855,7 +855,7 @@ File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 
 ]
 Chapter 2.
-<marine_data_flow.png, id=174, 745.78625pt x 424.58624pt>
+<marine_data_flow.png, id=168, 745.78625pt x 424.58624pt>
 LaTeX Font Info:    Try loading font information for T1+pcr on input line 132.
 (/usr/local/texlive/2019/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
@@ -864,21 +864,21 @@ File: marine_data_flow.png Graphic file (type png)
 <use marine_data_flow.png>
 Package pdftex.def Info: marine_data_flow.png  used on input line 132.
 (pdftex.def)             Requested size: 451.68457pt x 257.1508pt.
- [3 <./marine_data_flow.png>] [4]
+ [3 <./marine_data_flow.png>] [4
+
+]
 Chapter 3.
-<obs_suite_levels.png, id=187, 563.10374pt x 395.4775pt>
+<obs_suite_levels.png, id=182, 563.10374pt x 395.4775pt>
 File: obs_suite_levels.png Graphic file (type png)
 <use obs_suite_levels.png>
-Package pdftex.def Info: obs_suite_levels.png  used on input line 155.
+Package pdftex.def Info: obs_suite_levels.png  used on input line 145.
 (pdftex.def)             Requested size: 376.40381pt x 264.35303pt.
-[5
-
- <./obs_suite_levels.png>] [6]
+[5 <./obs_suite_levels.png>] [6]
 Chapter 4.
-<marine_file_system.png, id=198, 564.1075pt x 355.3275pt>
+<marine_file_system.png, id=193, 564.1075pt x 355.3275pt>
 File: marine_file_system.png Graphic file (type png)
 <use marine_file_system.png>
-Package pdftex.def Info: marine_file_system.png  used on input line 205.
+Package pdftex.def Info: marine_file_system.png  used on input line 195.
 (pdftex.def)             Requested size: 451.68457pt x 284.5172pt.
 [7
 
@@ -887,7 +887,7 @@ Package pdftex.def Info: marine_file_system.png  used on input line 205.
 ]
 Chapter 5.
 [9]
-Overfull \hbox (6.83133pt too wide) in paragraph at lines 291--293
+Overfull \hbox (6.83133pt too wide) in paragraph at lines 273--275
 []|\T1/phv/m/n/10 version| 
  []
 
@@ -900,7 +900,7 @@ Chapter 6.
 ]
 Chapter 7.
 
-Underfull \hbox (badness 10000) in paragraph at lines 389--391
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
 []|\T1/phv/m/n/10 Marine code
  []
 
@@ -929,23 +929,23 @@ Chapter 13.
 [29
 
 ] [30] (./marineobservationssuite.ind)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1432.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1414.
  [31]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1432.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1414.
  (./marineobservationssuite.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1432.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1432.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1414.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1414.
 
 Package rerunfilecheck Info: File `marineobservationssuite.out' has not changed
 .
-(rerunfilecheck)             Checksum: 16DA168435474EEC261C66A023E9B22D;4197.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1432.
+(rerunfilecheck)             Checksum: 4D9BD12D335D929453E0EB04205C5556;4056.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1414.
  ) 
 Here is how much of TeX's memory you used:
- 13482 strings out of 492616
- 189897 string characters out of 6129481
- 345452 words of memory out of 5000000
- 17037 multiletter control sequences out of 15000+600000
+ 13478 strings out of 492616
+ 189833 string characters out of 6129481
+ 345364 words of memory out of 5000000
+ 17034 multiletter control sequences out of 15000+600000
  51363 words of font info for 68 fonts, out of 8000000 for 9000
  1142 hyphenation exceptions out of 8191
  37i,11n,48p,570b,494s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -959,10 +959,10 @@ nts/type1/urw/helvetic/uhvr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/typ
 e1/urw/times/utmb8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/tim
 es/utmr8a.pfb></usr/local/texlive/2019/texmf-dist/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on marineobservationssuite.pdf (35 pages, 412675 bytes).
+Output written on marineobservationssuite.pdf (35 pages, 411680 bytes).
 PDF statistics:
- 399 PDF objects out of 1000 (max. 8388607)
- 338 compressed objects within 4 object streams
- 68 named destinations out of 1000 (max. 500000)
- 252 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 393 PDF objects out of 1000 (max. 8388607)
+ 332 compressed objects within 4 object streams
+ 67 named destinations out of 1000 (max. 500000)
+ 244 words of extra memory for PDF output out of 10000 (max. 10000000)
 
