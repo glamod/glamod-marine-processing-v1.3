@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export home_directory=/group_workspaces/jasmin2/glamod_marine
+export home_directory=/gws/nopw/j04/glamod_marine
 export home_directory_smf=/gws/smf/j04/c3s311a_lot2
-export code_directory=$home_directory_smf/code/marine_code/glamod-marine-processing/obs-suite
+export code_directory=$home_directory_smf/dyb/release_4.0/glamod-marine-processing/obs-suite
 export config_directory=$home_directory_smf/code/marine_code/glamod-marine-config/obs-suite
 
 export pyTools_directory=$code_directory/modules/python
