@@ -87,7 +87,7 @@ def main(source_dir,source_pattern,log_dir,script_config,release_periods,
             for source_file in source_files:
                 yyyy,mm = get_yyyymm(source_file)
                 if int(yyyy) >= year_init and int(yyyy) <= year_end:
-                    config_element(sid_dck_log_dir,ai,script_config,sid_dck,yyyy,mm)
+                    config_element(sid_dck_log_dir,ai,script_config,sid_dck,yyyy,mm, source_file)
                     ai +=1
             logging.info('{} elements configured'.format(str(ai)))
             if len(job_file) > 0:
