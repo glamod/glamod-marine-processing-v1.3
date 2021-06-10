@@ -113,6 +113,11 @@ with open(release_periods_file,'r') as fO:
 # Build array input files -----------------------------------------------------
 logging.info('CONFIGURING JOB ARRAYS...')
 
+
+# check if SOURCE_PATTERN in config, if so overwrite SOURCE_PATTERN
+if 'source_pattern' in script_config:
+    SOURCE_PATTERN = script_config['source_pattern']
+
 status = config_array.main(level_source_dir,SOURCE_PATTERN,log_dir,
                            script_config,release_periods,process_list,
                            failed_only = failed_only) 

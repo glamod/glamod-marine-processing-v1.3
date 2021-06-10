@@ -105,6 +105,7 @@ class script_setup:
             self.sid_dck = config.get('sid_dck')
             self.year = config.get('yyyy')
             self.month = config.get('mm') 
+            self.filename = config.get('filename')
         
         print(config)            
         self.dck = self.sid_dck.split("-")[1]
@@ -181,7 +182,10 @@ if any([ not os.path.isdir(x) for x in data_paths ]):
     logging.error('Could not find data paths: '.format(','.join([ x for x in data_paths if not os.path.isdir(x)])))
     sys.exit(1)
 
-L0_filename = os.path.join(L0_path,FFS.join([params.year,params.month]) + '.imma')
+#L0_filename = os.path.join(L0_path,FFS.join([params.year,params.month]) + '.imma')
+L0_filename = params.filename
+
+
 if not os.path.isfile(L0_filename):
     logging.error('L0 file not found: {}'.format(L0_filename))
     sys.exit(1)

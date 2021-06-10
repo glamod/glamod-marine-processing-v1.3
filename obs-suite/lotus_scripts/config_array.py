@@ -14,10 +14,12 @@ import re
 DATE_REGEX="([1-2]{1}[0-9]{3}\-(0[1-9]{1}|1[0-2]{1}))"
 
 # FUNCTIONS -------------------------------------------------------------------
-def config_element(sid_dck_log_dir,ai,script_config,sid_dck,yyyy,mm):
+def config_element(sid_dck_log_dir,ai,script_config,sid_dck,yyyy,mm,filename=None):
     script_config.update({'sid_dck':sid_dck})
     script_config.update({'yyyy':yyyy})
     script_config.update({'mm':mm})
+    if filename is not None:
+        script_config.update({'filename':filename})
     ai_config_file = os.path.join(sid_dck_log_dir,str(ai) + '.input')
     with open(ai_config_file,'w') as fO:
         json.dump(script_config,fO,indent = 4)
