@@ -1,0 +1,13 @@
+{
+  "schema":"/gws/smf/j04/c3s311a_lot2/dyb/qc_code/schemas/imma/imma.json",
+  "code_tables":"/gws/smf/j04/c3s311a_lot2/dyb/qc_code/schemas/imma/code_tables/",
+  "jobs": [
+    {
+      "index": 1,
+      "year1": 2014,
+      "month1": 10,
+      "year2": 2014,
+      "month2": 10
+    }
+  ]
+}

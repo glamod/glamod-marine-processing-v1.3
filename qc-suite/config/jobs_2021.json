@@ -1,0 +1,27 @@
+{
+  "schema":"/gws/smf/j04/c3s311a_lot2/dyb/qc_code/schemas/imma/imma.json",
+  "code_tables":"/gws/smf/j04/c3s311a_lot2/dyb/qc_code/schemas/imma/code_tables/",
+  "jobs": [
+    {
+      "index": 1,
+      "year1": 2021,
+      "month1": 1,
+      "year2": 2021,
+      "month2": 1
+    },
+    {
+      "index": 2,
+      "year1": 2021,
+      "month1": 2,
+      "year2": 2021,
+      "month2": 2
+    },
+    {
+      "index": 3,
+      "year1": 2021,
+      "month1": 3,
+      "year2": 2021,
+      "month2": 3
+    }
+  ]
+}

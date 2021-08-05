@@ -65,6 +65,13 @@ def main(argv):
     output_fields.append('completeness')
 
     numeric_columns = list()
+
+
+    # some bad data appear to creeping through to this point, we need to do a quick fix
+    bad_anDC2 = metadata['anemometer2_distance_centreline'].str.match(r'[a-zA-Z]') == True
+    metadata.at[ bad_anDC2 , 'anemometer1_side' ] = metadata.loc[ bad_anDC2, 'anemometer2_distance_centreline' ]
+    metadata.at[ bad_anDC2, 'anemometer2_distance_centreline' ] = pd.np.nan 
+
     for column in metadata:
         fieldInfo = None
         for field in mapping['fields']:
@@ -159,7 +166,7 @@ def main(argv):
         metadata[column] = metadata[column].map(m)
 
 
-    mm = pd.np.arange( 660 )
+    mm = pd.np.arange( 780 )
     dates = list( dt.datetime( 1956, 1 , 1) + relativedelta( months = m ) for m in mm )
     d = dates[idx]
 
@@ -201,10 +208,10 @@ def main(argv):
     field_map = {'callsign':'call', 'record_number':'record', 'name':'name', 'observing_frequency':'freq', \
                 'meteorological_vessel_type':'vsslM', 'vessel_type':'vssl', 'automation':'automation', \
                 'recruiting_country':'rcnty', 'valid_from':'valid_from', 'valid_to':'valid_to', 'uid':'uid', \
-                'thermometer1_height':'thmH1', 'platH':'platH', 'barometer1_height':'brmH1', 'anmH':'anmH', \
+                'thermometer1_height':'thmH1', 'platH':'platH', 'barometer1_height':'brmH1', 'anemH':'anmH', \
                 'anemometer1_height_loadline':'anHL1', 'windwave_observing_height':'wwH', 'sst1_depth':'sstD1', \
                 'thermometer1_id':'th1', 'hygrometer1_id':'hy1', 'sea_thermometer1_id':'st1', \
-                'barometer_id':'bm1', 'anemometer_id':'an1'}
+                'barometer1_id':'bm1', 'anemometer1_id':'an1'}
 
     unique_rows = unique_rows.rename( columns =  field_map )
 

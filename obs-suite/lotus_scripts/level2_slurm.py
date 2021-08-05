@@ -18,8 +18,8 @@ LEVEL = 'level2'
 PYSCRIPT = 'level2.py'
 CONFIG_FILE = 'level2.json'
 
-QUEUE = 'short-serial'
-JOB_TIME = '10:00:00'
+QUEUE = 'short-serial-4hr'
+JOB_TIME = '04:00:00'
 JOB_MEMO = 500
 #------------------------------------------------------------------------------
 
@@ -96,7 +96,7 @@ logging.info('SUBMITTING JOBS...')
 for sid_dck in process_list:
     log_diri = os.path.join(log_dir,sid_dck)
     
-    level2_job = "sbatch -J {0} -p {1}".format(sid_dck,QUEUE)
+    level2_job = "sbatch -J {0} -p {1} --account=short4hr".format(sid_dck,QUEUE)
     level2_job += " --output={0}/{1}.out --error={0}/{1}.out".format(log_diri,sid_dck)
     level2_job += " --open-mode=truncate --time={0} --mem={1}".format(JOB_TIME,str(JOB_MEMO))
     level2_job += " --wrap='{0} {1}'".format(pycommand,sid_dck)
@@ -107,11 +107,11 @@ for sid_dck in process_list:
 
     # Rename logs and clean inputs
     clean_ok = "sbatch --dependency=afterok:{0} --kill-on-invalid-dep=yes".format(jid)
-    clean_ok += " -p {0} --output=/dev/null --time=00:02:00 --mem=2".format(QUEUE)
+    clean_ok += " -p {0} --output=/dev/null --time=00:10:00 --mem=2 --account=short4hr".format(QUEUE)
     clean_ok += " --wrap='mv {0}/{1}.out {0}/{1}-{2}-{3}.ok'".format(log_diri,sid_dck,release,update)
     _jid = launch_process(clean_ok)
 
     clean_failed = "sbatch --dependency=afternotok:{0} --kill-on-invalid-dep=yes".format(jid)
-    clean_failed += " -p {0} --output=/dev/null --time=00:02:00 --mem=2".format(QUEUE)
+    clean_failed += " -p {0} --output=/dev/null --time=00:10:00 --mem=2 --account=short4hr".format(QUEUE)
     clean_failed += " --wrap='mv {0}/{1}.out {0}/{1}-{2}-{3}.failed'".format(log_diri,sid_dck,release,update)
     _jid = launch_process(clean_failed)

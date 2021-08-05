@@ -51,3 +51,5 @@ level2_dict['year_end'] = year_end
 
 with open(level_filename,'w') as fileObj:
     json.dump(level2_dict,fileObj,indent=4)    
+
+logging.info('End')

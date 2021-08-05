@@ -101,13 +101,14 @@ class script_setup:
             self.sid_dck = inargs[6]
             self.year = inargs[7]
             self.month = inargs[8]    
+            self.filename = config.get('filename')
         else:
             self.sid_dck = config.get('sid_dck')
             self.year = config.get('yyyy')
             self.month = config.get('mm') 
             self.filename = config.get('filename')
         
-        print(config)            
+        #print(config)            
         self.dck = self.sid_dck.split("-")[1]
         
         process_options = ['data_model', 'read_sections','filter_reports_by',
@@ -163,6 +164,7 @@ else:
     sys.exit(1)
 
 params = script_setup(args)
+#print(params)
 
 if not params.flag:
     logging.error('Error parsing initial configuration')
@@ -210,7 +212,7 @@ read_kwargs = {'data_model':params.data_model,
 
 data_in = mdf_reader.read(L0_filename, **read_kwargs)
 
-print(data_in)
+#print(data_in)
 
 io_dict['read'] = {'total':inspect.get_length(data_in.data)}
 
@@ -375,3 +377,4 @@ if inspect.get_length(data_invalid['data']) > 0:
     write_out_junk(data_invalid['data'],invalid_data_filename)
     logging.info('Writing invalid data mask to file {}'.format(invalid_mask_filename))
     write_out_junk(data_invalid['valid_mask'],invalid_mask_filename)
+logging.info('End')

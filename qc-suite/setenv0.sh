@@ -1,6 +1,6 @@
-home_directory=/group_workspaces/jasmin2/glamod_marine
+home_directory=/gws/nopw/j04/glamod_marine/
 home_directory_smf=/gws/smf/j04/c3s311a_lot2
-code_directory=$home_directory_smf/code/marine_code/glamod-marine-processing/qc-suite
+code_directory=$home_directory_smf/dyb/release_4.0/glamod-marine-processing/qc-suite
 scripts_directory=$code_directory/scripts
 pyEnvironment_directory=$code_directory/pyenvs/env0
 modules_directory=$code_directory/modules
@@ -14,11 +14,11 @@ export LD_LIBRARY_PATH=/apps/contrib/jaspy/miniconda_envs/jaspy3.7/m3-4.5.11/env
 echo "Python environment loaded from gws: $pyEnvironment_directory"
 
 # Create the scratch directory for the user
-scratch_directory=/work/scratch-nompiio/$(whoami)
-if [ ! -d $scratch_directory ]
-then
-  echo "Creating user $(whoami) scratch directory $scratch_directory"
-  mkdir $scratch_directory
-else
-  echo "Scratch directory is $scratch_directory"
-fi
+#scratch_directory=/work/scratch-nompiio/$(whoami)
+#if [ ! -d $scratch_directory ]
+#then
+#  echo "Creating user $(whoami) scratch directory $scratch_directory"
+#  mkdir $scratch_directory
+#else
+#  echo "Scratch directory is $scratch_directory"
+#fi

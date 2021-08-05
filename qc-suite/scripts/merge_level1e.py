@@ -1,6 +1,7 @@
 from dateutil.relativedelta import relativedelta
 import datetime as dt
 import pandas as pd
+import numpy as np
 import argparse
 from pathlib import Path
 import sys
@@ -15,7 +16,7 @@ def main(argv):
     args = parser.parse_args()
     imonth = args.index - 1
     # generate list of months
-    mm = pd.np.arange(396)
+    mm = np.arange(444)
     dates = list(dt.datetime(1978, 1, 1) + relativedelta(months=m) for m in mm)
     # now get month to process
     year = dates[imonth].year
@@ -24,24 +25,25 @@ def main(argv):
     # get list of files to concatenate
     cdm_path = args.cdmpath # '/gws/nopw/j04/c3s311a_lot2/data/marine/r092019/ICOADS_R3.0.0T/'
     input_level = 'level1e/'
-    output_level = 'level1e_tmp/'
+    output_level = 'level1f/'
     siddck = '063-714/'
     # tracking_path = '/gws/nopw/j04/c3s311a_lot2/data/marine/r092019/MetOffice_Tracking_QC_Merged/'
     tracking_path = args.source # cdm_path + './metoffice_qc/dbuoy_track/merged/'
-    release_no = 'r092019'
+    release_no = 'release_4.0' # need to change this to an argument
     sub_issue_no = '000000'
     cdmfile = 'header-{:4d}-{:02d}-{}-{}.psv'.format(year, month, release_no, sub_issue_no)
     trackfile = '{:4d}-{:02d}.csv'.format(year, month)
 
     infile = cdm_path + input_level + siddck + cdmfile
     outfile = cdm_path + output_level + siddck + cdmfile
-
+    print(infile)
     if Path(infile).is_file():
 
         infile = pd.read_csv(infile, dtype='object', low_memory=False, sep='|')
         output_fields = list(infile.columns)
         infile = infile.assign(cdmuid=infile['report_id'])
         infile = infile.set_index('cdmuid')
+        print( tracking_path + trackfile )
         if Path(tracking_path + trackfile).is_file():
             trackdata = pd.read_csv(tracking_path + trackfile, dtype='object', low_memory=False)
             uid = trackdata['UID'].apply(lambda x: 'ICOADS-30-{}'.format(x))

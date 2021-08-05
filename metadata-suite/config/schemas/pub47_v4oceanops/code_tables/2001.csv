@@ -1,0 +1,34 @@
+code	description
+1	Bridge wing port.
+2	Bridge wing starboard.
+3	Bridge wing both sides.
+4	Bridge wing windward side.
+5	Wheelhouse top port.
+6	Wheelhouse top starboard.
+7	Wheelhouse top both.
+8	Wheelhouse top center.
+9	Wheelhouse top windward side.
+10	Mainmast.
+11	Foremast.
+12	Mast on wheelhouse top.
+13	Main deck port side.
+14	Main deck starboard side.
+15	Main deck both sides.
+OT	Other (specify in footnote).
+Bridge wing port	Bridge wing port.
+Bridge wing starboard	Bridge wing starboard.
+Bridge wing both sides	Bridge wing both sides.
+Bridge wing windward side	Bridge wing windward side.
+Wheelhouse top port	Wheelhouse top port.
+Wheelhouse top starboard	Wheelhouse top starboard.
+Wheelhouse top both	Wheelhouse top both.
+Wheelhouse top center	Wheelhouse top center.
+Wheelhouse top windward side	Wheelhouse top windward side.
+Mainmast	Mainmast.
+Foremast	Foremast.
+Mast on wheelhouse top	Mast on wheelhouse top.
+Main deck port side	Main deck port side.
+Main deck starboard side	Main deck starboard side.
+Main deck both sides	Main deck both sides.
+Other	Other (specify in footnote).
+

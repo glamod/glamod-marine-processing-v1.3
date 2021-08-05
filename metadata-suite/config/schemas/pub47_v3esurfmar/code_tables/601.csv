@@ -1,0 +1,44 @@
+code	description
+vssl	Vessel type.
+rte	Route
+vsslM	Type of meteorological reporting ship.
+atm	General observing practice.
+freq	Routine observing frequency.
+prST	Transmission system for sending weather reports
+anmU	General wind observing practice.
+blc	Baseline check of the automatic weather station.
+barm	Barometer type.
+brmL	Location of the barometer.
+thrm	Dry bulb thermometer type.
+thmE	Exposure of the dry bulb thermometer.
+thmL	Location of the dry bulb thermometer and hgyrometer
+tscale	General temperature reporting practice.
+hygr	Hygrometer type.
+hgrE	Exposure of the hygrometer.
+sstM	Method of obtaining the sea surface temperature.
+barg	Barograph type, or method of determining pressure tendency.
+anmT	Anemometer type.
+anmL	Location of the anemometer.
+othI	Other meteorological/oceanographic instrument.
+VSSL	Vessel type.
+RTE	Route
+VSSLM	Type of meteorological reporting ship.
+ATM	General observing practice.
+FREQ	Routine observing frequency.
+PRST	Transmission system for sending weather reports
+ANMU	General wind observing practice.
+BLC	Baseline check of the automatic weather station.
+BARM	Barometer type.
+BRML	Location of the barometer.
+THRM	Dry bulb thermometer type.
+THME	Exposure of the dry bulb thermometer.
+THML	Location of the dry bulb thermometer and hgyrometer
+TSCALE	General temperature reporting practice.
+HYGR	Hygrometer type.
+HGRE	Exposure of the hygrometer.
+SSTM	Method of obtaining the sea surface temperature.
+BARG	Barograph type, or method of determining pressure tendency.
+ANMT	Anemometer type.
+ANML	Location of the anemometer.
+OTHI	Other meteorological/oceanographic instrument.
+VSSLP	Vessel digital image.

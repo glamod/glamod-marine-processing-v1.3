@@ -50,6 +50,7 @@ def main(argv):
 
     #icoads_dir = '/gws/nopw/j04/c3s311a_lot2/data/level0/marine/sub_daily_data/IMMA1_R3.0.0T/'
     filename = icoads_dir + 'IMMA1_R3.0.0T_{:04d}-{:02d}'.format(readyear, readmonth)
+    #filename = icoads_dir + 'IMMA1_R3.0.1T_{:04d}-{:02d}'.format(readyear, readmonth)
     #out_dir = '/gws/nopw/j04/c3s311a_lot2/data/level0/marine/sub_daily_data/IMMA1_R3.0.0T-QC-test/'
 
     print('Input file is {}'.format(filename))

@@ -1,0 +1,39 @@
+code	description	platform_type	platform_sub_type
+BA	Barges, including crane barges and tank barges.	2	0
+BC	Bulk Carriers, including Ore/Bulk/Oil (OBO) carriers and Ore/Oil carriers.	2	1
+CA	Cable ships.	2	2
+CG	Coastguard cutters, patrol ships and launches.	2	3
+CS	Container ships, including open and closed container ships and refrigerated container ships.	2	4
+DR	Dredgers including bucket, hopper, grab and suction dredgers.	2	5
+FE	Passenger ferries (carrying passengers only).	2	6
+FP	Floating Production and Storage Units.	2	7
+FV	Fishing Vessels including purse seiners, long liners etc., but excluding trawlers.	2	8
+GC	General Cargo ships with one or more holds.	2	9
+GT	Liquefied gas carriers/tankers including LNG and LPG carriers.	2	10
+IC	Icebreaking vessels (dedicated vessel). If the vessel fits in another category and is ice strengthened then include ‚Äòice strengthened‚Äô as a footnote.	2	11
+LC	Livestock Carrier (dedicated ship for the carriage of livestock).	2	13
+LT	Liquid tankers including oil product tankers, chemical tankers and crude oil tankers (including VLCC‚Äôs and ULCC‚Äôs).	2	14
+LV	Light vessels.	2	15
+MI	Mobile installations, including mobile offshore drill ships, jack-up rigs, semi-submersibles.	2	16
+MS	Military ships.	2	17
+OW	Ocean Weather Ships (dedicated weather ship).	2	19
+PI	Pipe Layers.	2	20
+PS	Passenger ships and Cruise liners.	2	21
+RF	Ro Ro ferries (carrying passengers and laden vehicles).	2	22
+RR	Ro Ro cargo ships for carriage of road and/or rail vehicles and cargo, including containerised cargo.	2	23
+RS	Refrigerated cargo ships including banana ships.	2	24
+RV	Research Vessels, including oceanographic, meteorological and hydrographic research ships and seismographic research ships.	2	25
+SA	Large sailing vessels, including sail training vessels.	2	26
+SV	Support vessels including offshore support vessels, offshore supply vessels, stand-by vessels, pipe carriers, anchor handling vessels, buoy tenders (including coastguard vessels engaged solely on buoy tending duties), diving support vessels, etc.	2	27
+TR	Trawler fishing vessels.	2	28
+TU	Tugs, including fire-fighting tugs, salvage tugs, pusher tugs, pilot vessels, tenders etc.	2	29
+VC	Vehicle Carriers: dedicated multi deck ships for the carriage of new unladen road vehicles.	2	30
+YA	Yachts and pleasure craft.	2	31
+OT	Other (specify in footnote).	2	18
+WH	Whaling vessel (including factory ships)
+HP	Hospital ship
+TS	Training ship (non-sail)
+MD	MARID (UK)
+RC	North Sea Trader
+PV	Passenger vessel
+IF	Inshore fishing vessel

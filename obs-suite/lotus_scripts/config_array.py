@@ -46,6 +46,11 @@ def main(source_dir,source_pattern,log_dir,script_config,release_periods,
         logging.info('Configuring data partition: {}'.format(sid_dck)) 
         sid_dck_log_dir = os.path.join(log_dir,sid_dck)
         job_file = glob.glob(os.path.join(sid_dck_log_dir,sid_dck + '.slurm'))
+
+        # check is seperate configuration for this source / deck
+        config = script_config.get( sid_dck )
+        if config is None:
+            config = script_config
             
         ai = 1
         if not os.path.isdir(sid_dck_log_dir):
@@ -72,8 +77,12 @@ def main(source_dir,source_pattern,log_dir,script_config,release_periods,
                     os.remove(job_file[0])
                 for failed_file in failed_files:
                     yyyy,mm = get_yyyymm(failed_file)
+                    source_file = re.sub("[?]{4}",yyyy,source_pattern)
+                    source_file = re.sub("[?]{2}",mm,source_file)
+                    source_file = os.path.join( source_dir, sid_dck, source_file )
                     if int(yyyy) >= year_init and int(yyyy) <= year_end:
-                        config_element(sid_dck_log_dir,ai,script_config,sid_dck,yyyy,mm)
+                        #config_element(sid_dck_log_dir,ai,script_config,sid_dck,yyyy,mm, source_file)
+                        config_element(sid_dck_log_dir,ai,config,sid_dck,yyyy,mm, source_file)
                         ai += 1
             else:
                 logging.info('{}: no failed files'.format(sid_dck))
@@ -87,7 +96,8 @@ def main(source_dir,source_pattern,log_dir,script_config,release_periods,
             for source_file in source_files:
                 yyyy,mm = get_yyyymm(source_file)
                 if int(yyyy) >= year_init and int(yyyy) <= year_end:
-                    config_element(sid_dck_log_dir,ai,script_config,sid_dck,yyyy,mm, source_file)
+                    #config_element(sid_dck_log_dir,ai,script_config,sid_dck,yyyy,mm, source_file)
+                    config_element(sid_dck_log_dir,ai,config,sid_dck,yyyy,mm, source_file)
                     ai +=1
             logging.info('{} elements configured'.format(str(ai)))
             if len(job_file) > 0:

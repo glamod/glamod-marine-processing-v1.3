@@ -306,4 +306,4 @@ L1b_io_filename = os.path.join(L1b_ql_path,fileID + '.json')
 with open(L1b_io_filename,'w') as fileObj:
     simplejson.dump({'-'.join([params.year,params.month]):correction_dict},fileObj,
                      default = date_handler,indent=4,ignore_nan=True)
-
+logging.info('End')

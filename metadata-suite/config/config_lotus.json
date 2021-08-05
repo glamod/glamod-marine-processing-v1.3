@@ -1,10 +1,10 @@
 {
-  "data_path"        : "/group_workspaces/jasmin2/glamod_marine/data/datasets/WMO_Publication_47/",
-  "config_path"      : "/gws/smf/j04/c3s311a_lot2/code/marine_code/glamod-marine-processing/metadata-suite/config/",
+  "data_path"        : "/gws/nopw/j04/glamod_marine/data/datasets/WMO_Publication_47/",
+  "config_path"      : "/gws/smf/j04/c3s311a_lot2/dyb/release_4.0/glamod-marine-processing/metadata-suite/config/",
   "verbose"          : true,
-  "output_path"      : "/group_workspaces/jasmin2/glamod_marine/data/r092019/wmo_publication_47/",
+  "output_path"      : "/gws/nopw/j04/glamod_marine/data/release_4.0/wmo_publication_47/",
   "corrections_file" : "corrections.json",
-  "mapping_path"     : "/gws/smf/j04/c3s311a_lot2/code/marine_code/glamod-marine-processing/metadata-suite/config/mapping/",
+  "mapping_path"     : "/gws/smf/j04/c3s311a_lot2/dyb/release_4.0/glamod-marine-processing/metadata-suite/config/mapping/",
   "duplicateChecks":[
     "anemometer1_calibration_date","anemometer1_distance_bow","anemometer1_distance_centreline",
     "anemometer1_height_deck","anemometer1_height_loadline","anemometer1_location","anemometer1_make_model",

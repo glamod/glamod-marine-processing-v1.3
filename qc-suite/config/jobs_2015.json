@@ -1,0 +1,510 @@
+{
+  "schema":"/gws/smf/j04/c3s311a_lot2/dyb/qc_code/schemas/imma/imma.json",
+  "code_tables":"/gws/smf/j04/c3s311a_lot2/dyb/qc_code/schemas/imma/code_tables/",
+  "jobs": [
+    {
+      "index": 1,
+      "year1": 2015,
+      "month1": 1,
+      "year2": 2015,
+      "month2": 1
+    },
+    {
+      "index": 2,
+      "year1": 2015,
+      "month1": 2,
+      "year2": 2015,
+      "month2": 2
+    },
+    {
+      "index": 3,
+      "year1": 2015,
+      "month1": 3,
+      "year2": 2015,
+      "month2": 3
+    },
+    {
+      "index": 4,
+      "year1": 2015,
+      "month1": 4,
+      "year2": 2015,
+      "month2": 4
+    },
+    {
+      "index": 5,
+      "year1": 2015,
+      "month1": 5,
+      "year2": 2015,
+      "month2": 5
+    },
+    {
+      "index": 6,
+      "year1": 2015,
+      "month1": 6,
+      "year2": 2015,
+      "month2": 6
+    },
+    {
+      "index": 7,
+      "year1": 2015,
+      "month1": 7,
+      "year2": 2015,
+      "month2": 7
+    },
+    {
+      "index": 8,
+      "year1": 2015,
+      "month1": 8,
+      "year2": 2015,
+      "month2": 8
+    },
+    {
+      "index": 9,
+      "year1": 2015,
+      "month1": 9,
+      "year2": 2015,
+      "month2": 9
+    },
+    {
+      "index": 10,
+      "year1": 2015,
+      "month1": 10,
+      "year2": 2015,
+      "month2": 10
+    },
+    {
+      "index": 11,
+      "year1": 2015,
+      "month1": 11,
+      "year2": 2015,
+      "month2": 11
+    },
+    {
+      "index": 12,
+      "year1": 2015,
+      "month1": 12,
+      "year2": 2015,
+      "month2": 12
+    },
+    {
+      "index": 13,
+      "year1": 2016,
+      "month1": 1,
+      "year2": 2016,
+      "month2": 1
+    },
+    {
+      "index": 14,
+      "year1": 2016,
+      "month1": 2,
+      "year2": 2016,
+      "month2": 2
+    },
+    {
+      "index": 15,
+      "year1": 2016,
+      "month1": 3,
+      "year2": 2016,
+      "month2": 3
+    },
+    {
+      "index": 16,
+      "year1": 2016,
+      "month1": 4,
+      "year2": 2016,
+      "month2": 4
+    },
+    {
+      "index": 17,
+      "year1": 2016,
+      "month1": 5,
+      "year2": 2016,
+      "month2": 5
+    },
+    {
+      "index": 18,
+      "year1": 2016,
+      "month1": 6,
+      "year2": 2016,
+      "month2": 6
+    },
+    {
+      "index": 19,
+      "year1": 2016,
+      "month1": 7,
+      "year2": 2016,
+      "month2": 7
+    },
+    {
+      "index": 20,
+      "year1": 2016,
+      "month1": 8,
+      "year2": 2016,
+      "month2": 8
+    },
+    {
+      "index": 21,
+      "year1": 2016,
+      "month1": 9,
+      "year2": 2016,
+      "month2": 9
+    },
+    {
+      "index": 22,
+      "year1": 2016,
+      "month1": 10,
+      "year2": 2016,
+      "month2": 10
+    },
+    {
+      "index": 23,
+      "year1": 2016,
+      "month1": 11,
+      "year2": 2016,
+      "month2": 11
+    },
+    {
+      "index": 24,
+      "year1": 2016,
+      "month1": 12,
+      "year2": 2016,
+      "month2": 12
+    },
+    {
+      "index": 25,
+      "year1": 2017,
+      "month1": 1,
+      "year2": 2017,
+      "month2": 1
+    },
+    {
+      "index": 26,
+      "year1": 2017,
+      "month1": 2,
+      "year2": 2017,
+      "month2": 2
+    },
+    {
+      "index": 27,
+      "year1": 2017,
+      "month1": 3,
+      "year2": 2017,
+      "month2": 3
+    },
+    {
+      "index": 28,
+      "year1": 2017,
+      "month1": 4,
+      "year2": 2017,
+      "month2": 4
+    },
+    {
+      "index": 29,
+      "year1": 2017,
+      "month1": 5,
+      "year2": 2017,
+      "month2": 5
+    },
+    {
+      "index": 30,
+      "year1": 2017,
+      "month1": 6,
+      "year2": 2017,
+      "month2": 6
+    },
+    {
+      "index": 31,
+      "year1": 2017,
+      "month1": 7,
+      "year2": 2017,
+      "month2": 7
+    },
+    {
+      "index": 32,
+      "year1": 2017,
+      "month1": 8,
+      "year2": 2017,
+      "month2": 8
+    },
+    {
+      "index": 33,
+      "year1": 2017,
+      "month1": 9,
+      "year2": 2017,
+      "month2": 9
+    },
+    {
+      "index": 34,
+      "year1": 2017,
+      "month1": 10,
+      "year2": 2017,
+      "month2": 10
+    },
+    {
+      "index": 35,
+      "year1": 2017,
+      "month1": 11,
+      "year2": 2017,
+      "month2": 11
+    },
+    {
+      "index": 36,
+      "year1": 2017,
+      "month1": 12,
+      "year2": 2017,
+      "month2": 12
+    },
+    {
+      "index": 37,
+      "year1": 2018,
+      "month1": 1,
+      "year2": 2018,
+      "month2": 1
+    },
+    {
+      "index": 38,
+      "year1": 2018,
+      "month1": 2,
+      "year2": 2018,
+      "month2": 2
+    },
+    {
+      "index": 39,
+      "year1": 2018,
+      "month1": 3,
+      "year2": 2018,
+      "month2": 3
+    },
+    {
+      "index": 40,
+      "year1": 2018,
+      "month1": 4,
+      "year2": 2018,
+      "month2": 4
+    },
+    {
+      "index": 41,
+      "year1": 2018,
+      "month1": 5,
+      "year2": 2018,
+      "month2": 5
+    },
+    {
+      "index": 42,
+      "year1": 2018,
+      "month1": 6,
+      "year2": 2018,
+      "month2": 6
+    },
+    {
+      "index": 43,
+      "year1": 2018,
+      "month1": 7,
+      "year2": 2018,
+      "month2": 7
+    },
+    {
+      "index": 44,
+      "year1": 2018,
+      "month1": 8,
+      "year2": 2018,
+      "month2": 8
+    },
+    {
+      "index": 45,
+      "year1": 2018,
+      "month1": 9,
+      "year2": 2018,
+      "month2": 9
+    },
+    {
+      "index": 46,
+      "year1": 2018,
+      "month1": 10,
+      "year2": 2018,
+      "month2": 10
+    },
+    {
+      "index": 47,
+      "year1": 2018,
+      "month1": 11,
+      "year2": 2018,
+      "month2": 11
+    },
+    {
+      "index": 48,
+      "year1": 2018,
+      "month1": 12,
+      "year2": 2018,
+      "month2": 12
+    },
+    {
+      "index": 49,
+      "year1": 2019,
+      "month1": 1,
+      "year2": 2019,
+      "month2": 1
+    },
+    {
+      "index": 50,
+      "year1": 2019,
+      "month1": 2,
+      "year2": 2019,
+      "month2": 2
+    },
+    {
+      "index": 51,
+      "year1": 2019,
+      "month1": 3,
+      "year2": 2019,
+      "month2": 3
+    },
+    {
+      "index": 52,
+      "year1": 2019,
+      "month1": 4,
+      "year2": 2019,
+      "month2": 4
+    },
+    {
+      "index": 53,
+      "year1": 2019,
+      "month1": 5,
+      "year2": 2019,
+      "month2": 5
+    },
+    {
+      "index": 54,
+      "year1": 2019,
+      "month1": 6,
+      "year2": 2019,
+      "month2": 6
+    },
+    {
+      "index": 55,
+      "year1": 2019,
+      "month1": 7,
+      "year2": 2019,
+      "month2": 7
+    },
+    {
+      "index": 56,
+      "year1": 2019,
+      "month1": 8,
+      "year2": 2019,
+      "month2": 8
+    },
+    {
+      "index": 57,
+      "year1": 2019,
+      "month1": 9,
+      "year2": 2019,
+      "month2": 9
+    },
+    {
+      "index": 58,
+      "year1": 2019,
+      "month1": 10,
+      "year2": 2019,
+      "month2": 10
+    },
+    {
+      "index": 59,
+      "year1": 2019,
+      "month1": 11,
+      "year2": 2019,
+      "month2": 11
+    },
+    {
+      "index": 60,
+      "year1": 2019,
+      "month1": 12,
+      "year2": 2019,
+      "month2": 12
+    },
+    {
+      "index": 61,
+      "year1": 2020,
+      "month1": 1,
+      "year2": 2020,
+      "month2": 1
+    },
+    {
+      "index": 62,
+      "year1": 2020,
+      "month1": 2,
+      "year2": 2020,
+      "month2": 2
+    },
+    {
+      "index": 63,
+      "year1": 2020,
+      "month1": 3,
+      "year2": 2020,
+      "month2": 3
+    },
+    {
+      "index": 64,
+      "year1": 2020,
+      "month1": 4,
+      "year2": 2020,
+      "month2": 4
+    },
+    {
+      "index": 65,
+      "year1": 2020,
+      "month1": 5,
+      "year2": 2020,
+      "month2": 5
+    },
+    {
+      "index": 66,
+      "year1": 2020,
+      "month1": 6,
+      "year2": 2020,
+      "month2": 6
+    },
+    {
+      "index": 67,
+      "year1": 2020,
+      "month1": 7,
+      "year2": 2020,
+      "month2": 7
+    },
+    {
+      "index": 68,
+      "year1": 2020,
+      "month1": 8,
+      "year2": 2020,
+      "month2": 8
+    },
+    {
+      "index": 69,
+      "year1": 2020,
+      "month1": 9,
+      "year2": 2020,
+      "month2": 9
+    },
+    {
+      "index": 70,
+      "year1": 2020,
+      "month1": 10,
+      "year2": 2020,
+      "month2": 10
+    },
+    {
+      "index": 71,
+      "year1": 2020,
+      "month1": 11,
+      "year2": 2020,
+      "month2": 11
+    },
+    {
+      "index": 72,
+      "year1": 2020,
+      "month1": 12,
+      "year2": 2020,
+      "month2": 12
+    }
+  ]
+}

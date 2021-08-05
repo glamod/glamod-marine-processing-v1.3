@@ -69,6 +69,21 @@ def pub47int(X):
 
 # function to convert string to float handling known
 # exceptions in pub47 data
+#def pub47float(X):
+#    # strip white space
+#    X = X.strip()
+#    X = X.replace('-', '')
+#    # convert commas to periods
+#    X = X.replace(',','.')
+#    # replace double periods to single
+#    X = X.replace('..', '.')
+#    if( X == '' or X == 'NA'):
+#        #X = float('NaN')
+#        X = fmiss
+#    else:
+#        X = float(X)
+#    return(X)
+
 def pub47float(X):
     # strip white space
     X = X.strip()
@@ -77,12 +92,19 @@ def pub47float(X):
     X = X.replace(',','.')
     # replace double periods to single
     X = X.replace('..', '.')
+    # replace ' M' with blank
+    X = X.replace(' M','')
+    # replace 'm' with blank
+    X = X.replace('m', '')
+    # replace / with .
+    X = X.replace('/','.')
     if( X == '' or X == 'NA'):
         #X = float('NaN')
         X = fmiss
     else:
         X = float(X)
     return(X)
+
 
 # function to convert string to upper case, stripping white space
 # and converting missing to common value
@@ -313,35 +335,57 @@ def pub47load(schema, data_file, map_path = None):
         else:
             print( "No mapping file for {}".format(dictKey) )
     # non-simple mappings
-    # anemometer1_side
-    if 'anDC1' in input_data:
-        if 'anSC1' in input_data:
-            output_field = 'anSC1'
-        else:
-            output_field = 'anemometer1_side'
+    andc_fields = { 'anDC1':'anSC1', 'anDC2':'anSC2' }
+    for input_field in andc_fields:
+        output_field = andc_fields[ input_field ]
+        if (input_field in input_data) and (not (output_field in input_data) ):
             schema.column_code_table[ output_field ] = None
             schema.column_type[output_field] = 'object'
-        #print('parsing anemometer1 side')
-        input_data.at[:,output_field] = cmiss
-        input_data.at[input_data['anDC1'].str.contains('P'), output_field] = 'PORT'
-        input_data.at[input_data['anDC1'].str.contains('p'), output_field] = 'PORT'
-        input_data.at[ (input_data['anDC1'].str.contains('S')) & ( (input_data['anDC1'].astype(str) != cmiss)), output_field] = 'STARBOARD'
-        input_data.at[ (input_data['anDC1'].str.contains('s')) & ( (input_data['anDC1'].astype(str) != cmiss)), output_field] = 'STARBOARD'
-        input_data['anDC1'] = input_data['anDC1'].apply( lambda x: ''.join( filter(lambda y: (y.isdigit()) | (y == '.'), x) ) )
-    # anemometer2_side
-    if 'anDC2' in input_data:
-        if 'anSC2' in input_data:
-            output_field = 'anSC2'
-        else:
-            output_field = 'anemometer2_side'
-            schema.column_code_table[output_field] = None
-            schema.column_type[output_field] = 'object'
-        #print('parsing anemometer2 side')
-        input_data.at[:, output_field] = cmiss
-        input_data.at[input_data['anDC2'].str.contains('P'), output_field] = 'PORT'
-        input_data.at[input_data['anDC2'].str.contains('p'), output_field] = 'PORT'
-        input_data.at[ (input_data['anDC2'].str.contains('S')) & ( (input_data['anDC2'].astype(str) != cmiss)), output_field] = 'STARBOARD'
-        input_data.at[ (input_data['anDC2'].str.contains('s')) & ( (input_data['anDC2'].astype(str) != cmiss)), output_field] = 'STARBOARD'
-        input_data['anDC2'] = input_data['anDC2'].apply( lambda x: ''.join( filter(lambda y: (y.isdigit()) | (y == '.'), x) ) )
+            new_field = {output_field: None}
+            input_data = input_data.assign( **new_field )
+            input_data.at[:,output_field] = input_data[input_field].apply(lambda x: None if x is None else
+                                                                     ('PORT' if (('P' in x) | ('p' in x) ) else
+                                                                     ('STARBOARD' if (('S' in x) | ('s' in x)) else None)))
+            input_data.at[:,input_field] = input_data[input_field].apply(lambda x: None if x is None else
+                                                                         ''.join(filter(lambda y: (y.isdigit()) | (y == '.'), x)))
+            # replace empty strings with None
+            input_data.at[:, input_field] = input_data[input_field].apply(lambda x: None if x == '' else x)
+            # now convert to float
+            ind = input_data[input_field].apply( lambda x: False if x is None else True )
+            #print( input_data.loc[ ind , input_field] )
+            input_data[input_field] = input_data[input_field].astype( float )
+            schema.column_type[ input_field ] = 'float'
+
+#    # anemometer1_side
+#    if 'anDC1' in input_data:
+#        if 'anSC1' in input_data:
+#            output_field = 'anSC1'
+#        else:
+#            output_field = 'anemometer1_side'
+#            schema.column_code_table[ output_field ] = None
+#            schema.column_type[output_field] = 'object'
+#        #print('parsing anemometer1 side')
+#        input_data.at[:,output_field] = cmiss
+#        print(  input_data['anDC1'] )
+#        input_data.at[input_data['anDC1'].str.contains('P'), output_field] = 'PORT'
+#        input_data.at[input_data['anDC1'].str.contains('p'), output_field] = 'PORT'
+#        input_data.at[ (input_data['anDC1'].str.contains('S')) & ( (input_data['anDC1'].astype(str) != cmiss)), output_field] = 'STARBOARD'
+#        input_data.at[ (input_data['anDC1'].str.contains('s')) & ( (input_data['anDC1'].astype(str) != cmiss)), output_field] = 'STARBOARD'
+#        input_data['anDC1'] = input_data['anDC1'].apply( lambda x: ''.join( filter(lambda y: (y.isdigit()) | (y == '.'), x) ) )
+#    # anemometer2_side
+#    if 'anDC2' in input_data:
+#        if 'anSC2' in input_data:
+#            output_field = 'anSC2'
+#        else:
+#            output_field = 'anemometer2_side'
+#            schema.column_code_table[output_field] = None
+#            schema.column_type[output_field] = 'object'
+#        #print('parsing anemometer2 side')
+#        input_data.at[:, output_field] = cmiss
+#        input_data.at[input_data['anDC2'].str.contains('P'), output_field] = 'PORT'
+#        input_data.at[input_data['anDC2'].str.contains('p'), output_field] = 'PORT'
+#        input_data.at[ (input_data['anDC2'].str.contains('S')) & ( (input_data['anDC2'].astype(str) != cmiss)), output_field] = 'STARBOARD'
+#        input_data.at[ (input_data['anDC2'].str.contains('s')) & ( (input_data['anDC2'].astype(str) != cmiss)), output_field] = 'STARBOARD'
+#        input_data['anDC2'] = input_data['anDC2'].apply( lambda x: ''.join( filter(lambda y: (y.isdigit()) | (y == '.'), x) ) )
 
     return input_data

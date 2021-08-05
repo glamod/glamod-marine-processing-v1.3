@@ -107,7 +107,7 @@ def trim_mean(inarr, trim):
     length = len(arr)
     arr.sort()
 
-    index1 = (length / trim)
+    index1 = (length // trim)
 
     trim = np.mean(arr[index1:length - index1])
 
@@ -133,7 +133,7 @@ def trim_std(inarr, trim):
     length = len(arr)
     arr.sort()
 
-    index1 = (length / trim)
+    index1 = (length // trim)
 
     trim = np.std(arr[index1:length - index1])
 
@@ -186,7 +186,7 @@ def aground_check(reps, smooth_win=41, min_win_period=8, max_win_period=10):
     except AssertionError as error:
         raise AssertionError('invalid input parameter: ' + str(error))
 
-    half_win = (smooth_win - 1) / 2
+    half_win = (smooth_win - 1) // 2 # integer division
     min_win_period_hours = min_win_period * 24.0
     max_win_period_hours = max_win_period * 24.0
 
@@ -330,7 +330,7 @@ def new_aground_check(reps, smooth_win=41, min_win_period=8):
     except AssertionError as error:
         raise AssertionError('invalid input parameter: ' + str(error))
 
-    half_win = (smooth_win - 1) / 2
+    half_win = (smooth_win - 1) // 2 # changed to integer division to prevent index errors
     min_win_period_hours = min_win_period * 24.0
 
     nrep = len(reps)
@@ -807,7 +807,7 @@ def sst_tail_check(reps, long_win_len=121, long_err_std_n=3.0, short_win_len=30,
     end_tail_ind = nrep  # keeps track of index where end tail starts
 
     # do long tail check
-    mid_win_ind = (long_win_len - 1) / 2
+    mid_win_ind = (long_win_len - 1) // 2
     if nrep < long_win_len:  # records shorter than long-window length aren't evaluated
         pass
     else:

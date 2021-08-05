@@ -27,7 +27,7 @@ CONFIG_FILE = 'level1e.json'
 PERIODS_FILE = 'source_deck_periods.json'
 PYCLEAN = 'array_output_hdlr.py'
 BSH_REMOVE_FILES = 'remove_level_data.sh'
-QUEUE = 'short-serial'
+QUEUE = 'short-serial-4hr'
 #------------------------------------------------------------------------------
 
 #------------------------------------------------------------------------------
@@ -169,6 +169,7 @@ for sid_dck in process_list:
         fh.writelines('#SBATCH --time={}\n'.format(ti))
         fh.writelines('#SBATCH --mem={}\n'.format(memi))
         fh.writelines('#SBATCH --open-mode=truncate\n')
+        fh.writelines('#SBATCH --account=short4hr\n')
         fh.writelines('{0} {1}/$SLURM_ARRAY_TASK_ID.input\n'.format(pycommand,log_diri))
     
     logging.info('{}: launching array'.format(sid_dck)) 
@@ -178,20 +179,20 @@ for sid_dck in process_list:
     # Rename logs and clean inputs
     # First rename with aftercorr succesfull array elements: aftercorr work on an element by element basis, if exit 0
     clean_ok = "sbatch --dependency=aftercorr:{0} --kill-on-invalid-dep=yes --array=1-{1}".format(jid,str(array_size))
-    clean_ok += " -p {0} --output=/dev/null --time=00:02:00 --mem=2".format(QUEUE)
-    clean_ok += " --wrap='python {0} {1} {2} {3}/$SLURM_ARRAY_TASK_ID.input 0 0'".format(py_clean_path,release,update,log_diri)
+    clean_ok += " -p {0} --output=/dev/null --time=00:10:00 --mem=2".format(QUEUE)
+    clean_ok += " --account=short4hr --job-name={4}.ok --wrap='python {0} {1} {2} {3}/$SLURM_ARRAY_TASK_ID.input 0 0'".format(py_clean_path,release,update,log_diri,sid_dck)
     ok_jid = launch_process(clean_ok)
     # There is no aftercorr"notok", so after successfull are renamed to ok, rename the rest to *.failed
     clean_failed = "sbatch --dependency=afterany:{0} --kill-on-invalid-dep=yes --array=1-{1}".format(ok_jid,str(array_size))
-    clean_failed += " -p {0} --output=/dev/null --time=00:02:00 --mem=2".format(QUEUE)
-    clean_failed += " --wrap='python {0} {1} {2} {3}/$SLURM_ARRAY_TASK_ID.input 1 0'".format(py_clean_path,release,update,log_diri)
+    clean_failed += " -p {0} --output=/dev/null --time=00:10:00 --mem=2".format(QUEUE)
+    clean_failed += " --account=short4hr --job-name={4}.failed --wrap='python {0} {1} {2} {3}/$SLURM_ARRAY_TASK_ID.input 1 0'".format(py_clean_path,release,update,log_diri,sid_dck)
     _jid = launch_process(clean_failed)
 
     
     # Remove source level if all OK and requested:
     if remove_source:
         remove = "sbatch --dependency=afterok:{0} --kill-on-invalid-dep=yes -p {1}".format(jid,QUEUE) 
-        remove += " --time=00:10:00 --mem=2"
+        remove += " --time=00:30:00 --mem=2"
         remove += " --output={0}/remove_source.out --error={0}/remove_source.out --open-mode=truncate".format(log_diri)
-        remove += " --wrap='{0} {1} {2} {3} {4} {5}'".format(bsh_remove_path,sid_dck,release,update,dataset,LEVEL_SOURCE)
+        remove += " --account=short4hr --wrap='{0} {1} {2} {3} {4} {5}'".format(bsh_remove_path,sid_dck,release,update,dataset,LEVEL_SOURCE)
         _jid = launch_process(remove)    

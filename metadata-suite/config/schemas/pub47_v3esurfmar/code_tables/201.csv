@@ -1,0 +1,23 @@
+code	description
+CS	Closed scale
+OS	Open Scale barograph.
+OS1	Open Scale barograph with 1 day clock.
+OS2	Open Scale barograph with 2 day clock.
+OS3	Open Scale barograph with 3 day clock.
+OS4	Open Scale barograph with 4 day clock.
+OS5	Open Scale barograph with 5 day clock.
+OS6	Open Scale barograph with 6 day clock.
+OS7	Open Scale barograph with 7 day clock.
+OS8	Open Scale barograph with 8 day clock.
+OS9	Open Scale barograph with 9 day clock.
+SS	Small Scale barograph.
+SS7	Small scale barograph with 7 day clock.
+SS6	Small scale barograph with 6 day clock.
+SS5	Small scale barograph with 5 day clock.
+SS4	Small scale barograph with 4 day clock.
+SS3	Small scale barograph with 3 day clock.
+SS2	Small scale barograph with 2 day clock.
+SS1	Small scale barograph with 1 day clock.
+ET	Tendency obtained from an electronic digital barometer.
+OT	Other (specify in footnote).
+-1	Missing

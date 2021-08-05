@@ -1,0 +1,7 @@
+code	description	observing_frequency
+OPD	One observation per day (24 hour intervals)	1
+TPD	Two observations per day (12 hour intervals)	2
+FPD	Four observations per day (6 hour inervals)	4
+EPD	Eight observations per day (3 hour intervals)	8
+HLY	Hourly observations	24
+IRR	Irregular observations	0

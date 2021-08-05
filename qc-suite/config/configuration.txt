@@ -4,13 +4,13 @@ data_base_name:had_mdb
 [Icoads]
 icoads_version:3.0
 [Directories]
-ICOADS_dir:/group_workspaces/jasmin2/glamod_marine/working/qc-suite/corrected_data/
-out_dir:/group_workspaces/jasmin2/glamod_marine/data/r092019/ICOADS_R3.0.0T/metoffice_qc/base/
+ICOADS_dir:/gws/nopw/j04/glamod_marine/working/r4.0/qc-suite/corrected_data/
+out_dir:/gws/nopw/j04/glamod_marine/data/release_4.0/ICOADS_R3.0.0T/metoffice_qc/base/
 nrt_dir:/project/earthobs/ICOADS/NRT_Drifters/
 test_dir:/project/earthobs/ICOADS/
 NOC_adjustment_dir:/data/local2/hadjj/NMAT/
 ostia_dir:/project/ofrd/ostia/
-track_out_dir:/group_workspaces/jasmin2/glamod_marine/data/r092019/ICOADS_R3.0.0T/metoffice_qc/base/
+track_out_dir:/gws/nopw/j04/glamod_marine/data/release_4.0/ICOADS_R3.0.0T/metoffice_qc/tracking/
 [Files]
 parameter_file:/gws/smf/j04/c3s311a_lot2/code/marine_code/glamod-marine-processing/qc-suite/config/ParametersCCI.json
 IDs_to_exclude:/gws/smf/j04/c3s311a_lot2/code/marine_code/glamod-marine-processing/qc-suite/config/list_of_ids_that_are_not_ships.txt

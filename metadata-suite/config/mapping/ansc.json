@@ -3,6 +3,14 @@
 	"map":[
 		{"MSNG":"NULL"},
 		{"P":"PORT"},
-		{"S":"STARBOARD"}
+		{"PO":"PORT"},
+		{" P":"PORT"},
+		{"S":"STARBOARD"},
+		{"STAR": "STARBOARD"},
+		{"ST": "STARBOARD"},
+		{" S": "STARBOARD"},
+		{"starb": "STARBOARD"},
+		{"STARB": "STARBOARD"}
 	]
 }
+

@@ -139,7 +139,7 @@ class script_setup:
         self.update = inargs[3]
         self.dataset = inargs[4]
         self.configfile = inargs[5]
-        
+
         try:
             with open(self.configfile) as fileObj:
                 config = json.load(fileObj)
@@ -187,6 +187,7 @@ date_handler = lambda obj: (
 
 # This is to get the unique flag per parameter
 def get_qc_flags(qc,qc_df_full):
+    print('Here!') # dyb
     qc_avail = True
     bad_flag = '1' if qc != 'POS' else '2'
     good_flag = '0'
@@ -198,6 +199,16 @@ def get_qc_flags(qc,qc_df_full):
     # and keep only reports from current monthly table
     qc_df['UID'] = 'ICOADS-30-' + qc_df['UID']
     qc_df.set_index('UID',inplace=True,drop=True)
+    print( " ======================================================== " )
+    print( qc_df.index.duplicated()) # dyb
+    print( " ======================================================== " )
+    print( qc_df.loc[ qc_df.index.duplicated() ] )
+    print( " ======================================================== " )
+    print( header_df.index.duplicated()) # dyb
+    print( " ======================================================== " )
+    print( header_df.loc[ header_df.index.duplicated() ] )
+    print( " ======================================================== " )
+
     qc_df = qc_df.reindex(header_df.index)
     if len(qc_df.dropna(how='all')) == 0:
         # We can have files with nothing other than duplicates (which are not qced):
@@ -481,6 +492,4 @@ with open(level_io_filename,'w') as fileObj:
     simplejson.dump({'-'.join([params.year,params.month]):qc_dict},fileObj,
                      default = date_handler,indent=4,ignore_nan=True)
 
-    
-    
-    
+logging.info('End') 

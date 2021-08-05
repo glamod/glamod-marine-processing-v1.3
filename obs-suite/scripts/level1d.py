@@ -132,6 +132,7 @@ def map_to_cdm(md_model,meta_df):
     meta_cdm_columns = [ (table,x) for x in meta_cdm_dict[table]['data'].columns ]
     meta_cdm[meta_cdm_columns] = meta_cdm_dict[table]['data']
     for table in obs_tables:
+        print(table) # dyb
         meta_cdm_columns = [ (table,x) for x in meta_cdm_dict[table]['data'].columns ]
         meta_cdm[meta_cdm_columns] = meta_cdm_dict[table]['data']
     return meta_cdm
@@ -316,4 +317,4 @@ level_io_filename = os.path.join(level_ql_path,fileID + '.json')
 with open(level_io_filename,'w') as fileObj:
     simplejson.dump({'-'.join([params.year,params.month]):meta_dict},fileObj,
                      default = date_handler,indent=4,ignore_nan=True)
-
+logging.info('End')
